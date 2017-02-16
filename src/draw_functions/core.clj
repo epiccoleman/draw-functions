@@ -4,13 +4,16 @@
 
 (defn mod-color [ n ] (rem n 256))
 
+(defn do-stuff [ x y ] 
+  (* (+ x y) (* -1 x) y)) 
+
 (defn draw [state]
   (q/background 0 0 0)
 
   (doseq [ x (range 500)
            y (range 500) ] 
 
-  (q/stroke (mod-color (bit-xor x y)))
+  (q/stroke (mod-color (do-stuff x y)))
   (q/point x y))
 
 )
