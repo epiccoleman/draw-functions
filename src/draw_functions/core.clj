@@ -4,6 +4,22 @@
 
 (defn mod-color [ n ] (rem n 256))
 
+(defn mandelbrot [ x y ] 
+ (let [ c-real (* 4/500 (- x 250))
+        c-imag (* 4/500 (- y 250))
+        max-val 10]
+   (loop [ n 0 m 0 iter 0 ] 
+     (if (or (< 4 (+ (* m m) (* n n))) (>= iter max-val)) (if (>= iter max-val) 0  255  ) 
+       (recur (+ c-real (- (* m m) (* n n)))
+              (+ c-imag (* 2 m n ))
+              (inc iter)))))
+)
+
+;  (mandelbrot 250 250)
+;  (mandelbrot 0 0)
+;  (mandelbrot 250 300)
+;  (mandelbrot 500 500)
+
 (defn do-stuff [ x y ] 
   (* (+ x y) (* -1 x) y)) 
 
