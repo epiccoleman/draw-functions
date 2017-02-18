@@ -1,18 +1,7 @@
-# draw-functions
+draws a graph of bitwise-xor
 
-A Quil sketch designed to ... well, that part is up to you.
+checkout various commits for different stuff
 
-## Usage
+1bc822 was used in the talk
 
-LightTable - open `core.clj` and press `Ctrl+Shift+Enter` to evaluate the file.
-
-Emacs - run cider, open `core.clj` and press `C-c C-k` to evaluate the file.
-
-REPL - run `(require 'draw-functions.core)`.
-
-## License
-
-Copyright © 2016 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+example 3 from quil lightning talk 
